@@ -1,0 +1,20 @@
+[package]
+name = "valkey-nbt"
+version = "0.1.0"
+edition = "2021"
+description = "Valkey module for managing Minecraft NBT data with path-level locking"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+# Valkey module glue (custom data type, command registration, RDB/AOF).
+# The core (nbt / transaction / commands) has no external dependencies.
+valkey = ["dep:valkey-module", "dep:valkey-module-macros", "dep:linkme"]
+
+[dependencies]
+linkme = { version = "0.3", optional = true }
+valkey-module = { version = "0.1", optional = true }
+valkey-module-macros = { version = "0.1", optional = true }
