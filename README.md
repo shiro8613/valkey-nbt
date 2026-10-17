@@ -20,7 +20,7 @@ Paths: `Health`, `Inventory[0].Count`, `"quoted key".x`; `.` = root. Values: SNB
 | `NBT.TX.COMMIT txid` | atomic; returns number of applied ops |
 | `NBT.TX.ABORT txid` | |
 
-(`TX.MERGE/ADD/REMOVE` extend the spec's list)
+(TODOs: `TX.MERGE/ADD/REMOVE`)
 
 ## Decisions taken for open items
 
