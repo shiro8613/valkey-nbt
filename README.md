@@ -43,3 +43,9 @@ Paths: `Health`, `Inventory[0].Count`, `"quoted key".x`; `.` = root. Values: SNB
   depth ≤ 512. Binary strings are plain UTF-8, not Java modified UTF-8.
 * Array tags cannot be indexed element-wise (`Arr[0]`) yet; wildcards/filters are not supported.
 * Finished transaction ids are remembered (last 4096) and cannot be reused.
+
+## Build
+
+```sh
+cargo build --release --features valkey
+```
